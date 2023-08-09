@@ -44,7 +44,7 @@
               style="background-image: url(img/carousel-6.jpeg); background-size: cover"
             >
                 <a class="service-item bg-transparent rounded" href="">
-                    <h4 class="mb-3">Salão Nova Ioque</h4>
+                    <h4 class="mb-3">Salão Nova Iorque</h4>
                 </a>
             </div>
             <div class="col-lg-4 bg-image col-md-6 wow fadeInUp" data-wow-delay="0.1s"
