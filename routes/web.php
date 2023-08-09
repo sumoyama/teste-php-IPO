@@ -1,7 +1,7 @@
 <?php
 
-
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SpaceController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/rooms', [PageController::class, 'list_rooms'])->name('rooms.index');
+Route::get('/rooms', [SpaceController::class, 'index'])->name('rooms.index');

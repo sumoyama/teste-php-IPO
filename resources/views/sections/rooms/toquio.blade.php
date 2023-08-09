@@ -7,10 +7,10 @@
           <h3 class="text-center text-bold text-white-50">Salão Tóquio</h4>
           <h5 class=" text-white-50 mt-4">Espefificações do Salão:</h5>
           <ul class=" text-white-50 mt-2 mb-16">
-            <li>Endereço: </li>
-            <li>Telefone: </li> 
-            <li>Limite de Participantes</li>
-            <li>Horário de Funcionamento</li>
+            <li>Endereço: {{$informacoes[0]->endereco}}</li>
+            <li>Telefone: {{$informacoes[0]->telefone}} </li> 
+            <li>Limite de Participantes: {{$informacoes[0]->limit_partic}}</li>
+            <li>Horário de Funcionamento: {{$informacoes[0]->func_inicio}} até {{$informacoes[0]->func_final}}</li>
           </ul>
       </div>
   </div>
