@@ -2,21 +2,19 @@
 
 @section('header')
     @include('layouts.header')
-
 @endsection
 
 @section('content')
-
-  <!-- Rooms details -->
-    @include('sections.room-container')
+    <!-- Rooms details -->
+    @include('sections.rooms-container.room-container')
     <!-- Especification Rooms -->
-    @include('sections.room-container-especification')
+    @include('sections.rooms-container.room-container-especification')
     <!-- Especification Aditional Rooms -->
-    @include('sections.room-container-especification-aditional')
+    @include('sections.rooms-container.room-container-especification-aditional')
     <!-- Especification Services Rooms -->
-    @include('sections.room-container-services')
+    @include('sections.rooms-container.room-container-services')
     <!-- Newsletter -->
-    @include('sections.newsletter')
+    @include('sections.newsletter.index')
 @endsection
 @section('footer')
     @include('layouts.footer')

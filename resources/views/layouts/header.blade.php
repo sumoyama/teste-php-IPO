@@ -21,9 +21,9 @@
                            href="{{ route('home') }}">Página Inicial</a>
                         <a class="nav-item nav-link {{ request()->routeIs('rooms.index') ? 'active' : '' }}"
                            href="{{ route('rooms.index') }}">Salas</a>
-                            <a class="nav-item nav-link {{ request()->routeIs('login') ? 'active' : '' }}"
+                            <a class="nav-item nav-link {{ request()->routeIs('reservas') ? 'active' : '' }}"
                                href="">Reservas</a>
-                            <a class="nav-item nav-link {{ request()->routeIs('register') ? 'active' : '' }}"
+                            <a class="nav-item nav-link {{ request()->routeIs('Contatos') ? 'active' : '' }}"
                                href="">Contatos</a>
                        
                     </div>
@@ -33,7 +33,7 @@
                             <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
                             <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
                             <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="me-3" href=""><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>

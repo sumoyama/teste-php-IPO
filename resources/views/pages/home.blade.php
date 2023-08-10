@@ -3,18 +3,18 @@
 @section('header')
     @include('layouts.header')
     <!-- Carousel -->
-    @include('sections.carousel')
+    @include('sections.carousel.index')
 @endsection
 
 @section('content')
     <!-- Service -->
-    @include('sections.service')
+    @include('sections.service.index')
     <!-- Room -->
-    @include('sections.room-container-brief')
+    @include('sections.rooms-container.room-container-brief')
     <!-- Testimonial -->
-    @include('sections.testimonial')
+    @include('sections.testimonial.index')
     <!-- Newsletter -->
-    @include('sections.newsletter')
+    @include('sections.newsletter.index')
 @endsection
 
 @section('footer')

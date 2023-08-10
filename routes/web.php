@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/rooms', [SpaceController::class, 'index'])->name('rooms.index');
+Route::get('/room/{id}', [SpaceController::class, 'getByIdRoom'])->name('rooms.getByIdRoom');
