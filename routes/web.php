@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdditionalStructureController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SpaceController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/rooms', [SpaceController::class, 'index'])->name('rooms.index');
 Route::get('/room/{id}', [SpaceController::class, 'getByIdRoom'])->name('rooms.getByIdRoom');
+Route::post('/room/{id}', [SpaceController::class, 'store'])->name('rooms.store');
+Route::get('/pages/success', [SpaceController::class, 'success'])->name('pages.success');

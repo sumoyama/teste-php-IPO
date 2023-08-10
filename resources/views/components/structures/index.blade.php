@@ -1,6 +1,7 @@
-<div class="col-sm-3">
+<div class="col-sm-3 wow fadeInUp" data-wow-delay="{{ $delay }}">
     <div class="room-card-area">
-        <input class="room-checkbox" type="checkbox" id="{{ $id }}" value="{{ $id }}" />
+        <input class="room-checkbox" type="checkbox" id="{{ $id }}" name="additional[]"
+            value="{{ $title }}" />
         <div class="single-room-card">
             <div class="room-card-content">
                 <div class="room-card-icon">

@@ -14,5 +14,5 @@
             </ul>
         </div>
     </div>
-    <button class="btn-reserve btn btn-success">Reservar</button>
+    <button class="btn-reserve btn btn-success" data-id="{{ $informacoes->id }}">Reservar</button>
 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdditionalStructureModel;
 use App\Models\SpaceModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -12,8 +13,9 @@ class SpaceController extends Controller
     {
         // Lógica para exibir uma lista de informações
         // Recupera todos os registros
-        $informacoes = SpaceModel::all(); // Recupera todos os registros
-        return view('pages.list-rooms',  compact('informacoes'));
+        $informacoes = SpaceModel::all();
+        $estruturas = AdditionalStructureModel::all();
+        return view('pages.list-rooms',  compact('informacoes', 'additional'));
     }
     public function getByIdRoom(Request $request)
     {
@@ -32,6 +34,19 @@ class SpaceController extends Controller
             abort(404, 'Quarto não encontrado');
         }
 
-        return view('pages.room', ['room' => $room, 'src' => $src, 'nameRoom' => $nameRoom]);
+        return view('pages.room', ['room' => $room, 'src' => $src, 'nameRoom' => $nameRoom, 'id' => $id]);
+    }
+    public function store(Request $request, $id)
+    {
+        // Lógica para processar os dados do formulário POST
+        // por exemplo, salvar as informações adicionais na base de dados
+        //
+        // Redirecione para alguma página após a inserção
+        return redirect()->route('pages.success');
+    }
+
+    public function success()
+    {
+        return view('pages.success');
     }
 }
