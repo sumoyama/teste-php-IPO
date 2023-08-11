@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->boolean('recepcao');
-            $table->boolean('coffe_break');
+            $table->boolean('coffee_break');
         });
     }
 

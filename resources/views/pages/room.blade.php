@@ -6,6 +6,7 @@
 
 @section('content')
     @include('sections.room.index')
+
     <!-- Newsletter -->
     @include('sections.newsletter.index')
 @endsection

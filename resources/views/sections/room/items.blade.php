@@ -1,7 +1,7 @@
    <div class="container-xxl py-5">
        <div class="row">
            <div class="col-sm-12">
-               <form class='row' action="{{ route('rooms.store', ['id' => $id]) }}" method="post">
+               <div class='row'>
                    @csrf
                    @include('components.structures.index', [
                        'id' => '1',
@@ -38,11 +38,8 @@
                        'title' => 'Placas de Mesa',
                        'delay' => '0.1s',
                    ])
-                   <div class="items-center col-sm-12 room-next">
-                       <input type="submit" class="room-continueBtn" id='btn-continue' data-room-id="{{ $id }}"
-                           value='Continue' />
-                   </div>
-               </form>
+
+               </div>
 
 
            </div>

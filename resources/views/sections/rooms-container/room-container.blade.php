@@ -8,11 +8,11 @@
     <div class="container-fluid ">
         <div class="row">
             <div class="col-12">
-
                 @include('components.rooms-description.right-side', [
                     'roomName' => 'Salão Tóquio',
                     'informacoes' => $informacoes[0],
                     'imageSrc' => 'img/carousel-1.jpg',
+                    'id' => '1',
                 ])
                 @include('components.rooms-description.left-side', [
                     'roomName' => 'Salão Madri',
@@ -46,4 +46,4 @@
                 ])
             </div>
         </div>
-        <div>
+    </div>
