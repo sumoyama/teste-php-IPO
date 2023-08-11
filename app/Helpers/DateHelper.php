@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 
+use DateInterval;
 use DateTime;
 
 class DateHelper
@@ -17,7 +18,7 @@ class DateHelper
     $currentDate = new DateTime('');
     return $currentDate;
   }
-  public static function convertMonthYear($month, $year)
+  public static function convertMonth($month)
   {
     $monthNames = [
       1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março',
@@ -27,6 +28,20 @@ class DateHelper
     ];
 
     $monthName = $monthNames[$month];
-    return "$monthName $year";
+    return "$monthName";
+  }
+
+  public static function arrHour($inicioFuncionamento, $finalFuncionamento)
+  {
+    $startTime = new DateTime($inicioFuncionamento); // Horário inicial
+    $endTime = new DateTime($finalFuncionamento);   // Horário final
+    $interval = new DateInterval('PT1H');              // Intervalo de 1 hora
+
+    $hourlyDates = array(); // Array para armazenar as datas
+
+    for ($currentHour = clone $startTime; $currentHour <= $endTime; $currentHour->add($interval)) {
+      $hourlyDates[] = $currentHour->format('H:i');
+    }
+    return $hourlyDates;
   }
 }

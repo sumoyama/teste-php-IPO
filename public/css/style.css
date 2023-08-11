@@ -349,5 +349,8 @@
     height: 450px;
 }
 
-
+.btn-hours {
+     margin-right: 10px; 
+     background-color: gray;
+}
 

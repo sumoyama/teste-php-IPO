@@ -60,3 +60,10 @@ $(document).ready(function () {
         window.location.href = reservationRoute;
     });
 });
+// Date picker
+$(document).ready(function () {
+
+    $('#datepicker').datepicker({
+        format: 'dd/mm/yyyy'  // Defina o formato desejado aqui
+    });
+});

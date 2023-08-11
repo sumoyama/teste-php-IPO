@@ -29,14 +29,15 @@ class SpaceController extends Controller
         $room = SpaceModel::find($id);
         $src = "/img/carousel-" . $id . ".jpg";
         $nameRoom = $nameRooms[$id - 1];
-        $hours = DateHelper::calculateHoursDifference($room->func_inicio, $room->final);
+        $hours = DateHelper::calculateHoursDifference($room->func_inicio, $room->func_final);
         $today = DateHelper::today()->format('n');
-        dd($today);
+        $arrHours = DateHelper::arrHour($room->func_inicio, $room->func_final);
         if (!$room) {
             abort(404, 'Quarto não encontrado');
         }
 
-        return view('pages.room', ['room' => $room, 'src' => $src, 'nameRoom' => $nameRoom, 'id' => $id, 'hours' => $hours]);
+        return view('pages.room', ['room' => $room, 'src' => $src, 'nameRoom' =>
+        $nameRoom, 'id' => $id, 'hours' => $hours, 'arrHours' => $arrHours]);
     }
     public function store(Request $request, $id)
     {

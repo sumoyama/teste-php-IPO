@@ -9,6 +9,10 @@
          </div>
          <form action="{{ route('rooms.store', ['id' => $id]) }}" method="post">
              <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                 <h6 class="section-title text-center text-primary text-uppercase">Agende seu Salão</h6>
+                 @include('sections.room.schedule')
+             </div>
+             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                  <h6 class="section-title text-center text-primary text-uppercase">Escolha Nossos Serviços</h6>
                  @include('sections.room.services')
              </div>
