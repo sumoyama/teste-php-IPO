@@ -9,7 +9,7 @@ class ServiceModel extends Model
 {
     use HasFactory;
     protected $table = 'services';
-    protected $fillable = ['recepcao', 'coffee_break'];
+    protected $fillable = ['recepcao', 'qtd-recepcao', 'coffee_break', 'premium_coffee'];
     public $timestamps = false; // Desabilitar as colunas de timestamps
 
 }

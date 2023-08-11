@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('estrutura_adic_id');
             $table->unsignedBigInteger('servicos_id');
             $table->date('data_reserva');
+            $table->integer('qtd_pessoas');
             $table->time('hora_inicio');
             $table->time('hora_final');
             $table->timestamps();

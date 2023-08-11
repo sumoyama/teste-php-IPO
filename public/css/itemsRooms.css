@@ -78,14 +78,12 @@
     z-index: 999;
     cursor: pointer;
 }  
-.room-checkbox:checked ~ .single-room-card{border: 1px solid #2575fc;}
-.room-checkbox:checked:hover ~ .single-room-card{border: 1px solid #2575fc;}
+
 
 .room-checkbox:checked ~ .single-room-card .room-card-content .room-card-title{background-color:#2575fc; color: #ffffff;}
 .room-checkbox:checked ~ .single-room-card .room-card-content .room-card-title h3{color: #ffffff;}
-.room-checkbox:checked ~ .single-room-card .room-card-content .room-card-title h3 i{opacity: 1;}
-.room-checkbox:checked:hover ~ .room-card-title{border: 1px solid #2575fc;}
 
+.room-checkbox:checked:hover ~ .room-card-title{border: 1px solid #2575fc;}
 
 .room-card-icon{
     font-size: 50px;

@@ -33,6 +33,7 @@ Certifique-se de ter instalado:
 
 6. **Gere as migrações do banco de dados**
     ```bash
+    php artisan migrate        
     php artisan db:seed --class=DataBaseSeeder
 
 7. **Instale outras dependências do Node**

@@ -13,9 +13,9 @@ class DateHelper
     $date2 = new DateTime($end);
     return $date1->diff($date2)->h;
   }
-  public static function today()
+  public static function qtd_hour()
   {
-    $currentDate = new DateTime('');
+    $currentDate = new DateTime();
     return $currentDate;
   }
   public static function convertMonth($month)
@@ -31,17 +31,28 @@ class DateHelper
     return "$monthName";
   }
 
-  public static function arrHour($inicioFuncionamento, $finalFuncionamento)
+
+
+  public static function arrHour($inicioFuncionamento, $finalFuncionamento, $reserves)
   {
-    $startTime = new DateTime($inicioFuncionamento); // Horário inicial
-    $endTime = new DateTime($finalFuncionamento);   // Horário final
+    // Horário final
     $interval = new DateInterval('PT1H');              // Intervalo de 1 hora
-
+    $hoursBusy = [];
     $hourlyDates = array(); // Array para armazenar as datas
-
-    for ($currentHour = clone $startTime; $currentHour <= $endTime; $currentHour->add($interval)) {
-      $hourlyDates[] = $currentHour->format('H:i');
+    foreach ($reserves as $reserva) {
+      $startTime = new DateTime($reserva->hora_inicio); // Horário inicial
+      $endTime = new DateTime($reserva->hora_final);
+      for ($currentHour = clone $startTime; $currentHour <= $endTime; $currentHour->add($interval)) {
+        array_push($hoursBusy, $currentHour->format('H:i'));
+      }
     }
+    $startTime = new DateTime($inicioFuncionamento); // Horário inicial
+    $endTime = new DateTime($finalFuncionamento);
+    for ($currentHour = clone $startTime; $currentHour <= $endTime; $currentHour->add($interval)) {
+      if (!in_array($currentHour->format('H:i'), $hoursBusy))
+        $hourlyDates[] = $currentHour->format('H:i');
+    }
+
     return $hourlyDates;
   }
 }

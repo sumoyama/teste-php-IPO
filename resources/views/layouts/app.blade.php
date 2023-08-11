@@ -61,7 +61,14 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
     <!-- Template Javascript -->
+    <script>
+        var csrfToken = '{{ csrf_token() }}';
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="{{ asset('js/main.js') }}"></script>
+
+
 </body>
 
 </html>

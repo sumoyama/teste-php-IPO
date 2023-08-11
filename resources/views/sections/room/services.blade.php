@@ -13,10 +13,24 @@
                 @include('components.structures.index', [
                     'id' => '2',
                     'src' => '/img/coffe-break.jpeg',
-                    'alt' => 'Coffee Break',
+                    'alt' => 'Coffee Break tradicional',
                     'title' => 'Coffee Break',
                     'delay' => '0.2s',
                 ])
+                @include('components.structures.index', [
+                    'id' => '2',
+                    'src' => '/img/coffe-break.jpeg',
+                    'alt' => 'Coffee Break',
+                    'title' => 'Coffee Break Premmium',
+                    'delay' => '0.2s',
+                ])
+            </div>
+
+            <div class="text-center text-primary wow d-flex justify-content-lg-center align-items-center">
+                <label for="">Quantidade de Pessoas na Recepção:
+                </label>
+                <input type="number" class="number form-control text-center " value='0' id="recepcao" name="recepcao"
+                    min="0" max="{{ $qtd_people }}" style="width: 30%; margin-left: 5px;">
             </div>
         </div>
     </div>

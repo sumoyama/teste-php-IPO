@@ -7,10 +7,14 @@
                 <div class="room-card-icon">
                     <img class="img-room" src="{{ $src }}" alt="{{ $alt }}" />
                 </div>
+
+
                 <div class="room-card-title">
                     <h3>{{ $title }}</h3>
                 </div>
             </div>
+
         </div>
+
     </div>
 </div>

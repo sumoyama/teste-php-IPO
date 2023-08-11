@@ -65,9 +65,77 @@ class DatabaseSeeder extends Seeder
             ],
 
         ];
+        $reservas = [
+            [
+                'espaco_id' => 1,
+                'cliente_id' => 1,
+                'estrutura_adic_id' => 1,
+                'servicos_id' => 1,
+                'data_reserva' => '2023-08-12',
+                'qtd_pessoas' => 50,
+                'hora_inicio' => '14:00:00',
+                'hora_final' => '18:00:00',
+            ],
+            [
+                'espaco_id' => 1,
+                'cliente_id' => 2,
+                'estrutura_adic_id' => 2,
+                'servicos_id' => 2,
+                'data_reserva' => '2023-08-11',
+                'qtd_pessoas' => 30,
+                'hora_inicio' => '10:00:00',
+                'hora_final' => '14:00:00',
+            ],
+
+            [
+                'espaco_id' => 2,
+                'cliente_id' => 3,
+                'estrutura_adic_id' => 3,
+                'servicos_id' => 3,
+                'data_reserva' => '2023-08-12',
+                'qtd_pessoas' => 100,
+                'hora_inicio' => '15:00:00',
+                'hora_final' => '20:00:00',
+            ],
+            [
+                'espaco_id' => 4,
+                'cliente_id' => 4,
+                'estrutura_adic_id' => 4,
+                'servicos_id' => 4,
+                'data_reserva' => '2023-08-14',
+                'qtd_pessoas' => 30,
+                'hora_inicio' => '18:00:00',
+                'hora_final' => '20:00:00',
+            ],
+            [
+                'espaco_id' => 5,
+                'cliente_id' => 5,
+                'estrutura_adic_id' => 5,
+                'servicos_id' => 5,
+                'data_reserva' => '2023-08-16',
+                'qtd_pessoas' => 30,
+                'hora_inicio' => '16:00:00',
+                'hora_final' => '21:00:00',
+            ],
+            [
+                'espaco_id' => 1,
+                'cliente_id' => 6,
+                'estrutura_adic_id' => 6,
+                'servicos_id' => 6,
+                'data_reserva' => '2023-08-11',
+                'qtd_pessoas' => 30,
+                'hora_inicio' => '15:00:00',
+                'hora_final' => '18:00:00',
+            ],
+            // Adicione mais objetos conforme necessário
+        ];
+
 
         foreach ($rooms as $item) {
             DB::table('space')->insert($item);
+        }
+        foreach ($reservas as $item) {
+            DB::table('reserves')->insert($item);
         }
     }
 }
